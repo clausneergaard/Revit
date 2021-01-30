@@ -1,6 +1,6 @@
-Required = numpy
+# code written based on tutorial by Aussie BUM Guru (https://www.youtube.com/c/AussieBIMGuru)
+# required = numpy
 
-————
 # import packages
 import numpy as np
 

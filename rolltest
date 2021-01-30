@@ -1,0 +1,41 @@
+Required = numpy
+
+————
+# import packages
+import numpy as np
+
+# define function
+def rolltest(s, n):
+	np.random.seed(s)
+	taken_rolls = 0
+	val_rolls = []
+	
+	while taken_rolls < n:
+		result = np.random.randint(1, 7)
+		val_rolls.append(result)
+		taken_rolls += 1
+		if result != 1:
+			taken_rolls += 1
+		else:
+			taken_rolls = 0
+
+	total = sum(val_rolls)
+	return [total, val_rolls]
+
+# set test variables
+num_rolls = 10
+times = 10
+num_test = range(0, times)
+total_s, total_r = [], []
+
+# run the test
+for t in num_tests:
+	outcome = rolltest(t, num_rolls)
+	total = outcome[0]
+	rolls = len(outcome[1])
+	total_s.append(total)
+	total_r.append(rolls)
+
+# print results
+print(sum(total_s)/times)
+print(sum(total_r)/times)
